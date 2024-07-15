@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Welcome!!</title>
+    
+    <!-- Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- Thymeleaf link to your custom CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+    
+    <style>
+        /* Custom styles specific to this page */
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        .jumbotron {
+            background-color: #ff8c94; /* Pink jumbotron header */
+            color: #ffffff; /* White text */
+            padding: 2rem 1rem; /* Padding for jumbotron */
+        }
+        .card {
+            background-color: #ffd86f; /* Orange card background */
+            border: 1px solid #e3b0b5; /* Light pink border */
+            margin-bottom: 1rem; /* Bottom margin for cards */
+        }
+        .btn-custom {
+            background-color: #b19cd9; /* Lavender button background */
+            border-color: #b19cd9; /* Lavender button border */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Welcome</h1>
+        </div>
+        
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Register</h5>
+                        <p class="card-text">Click below to register.</p>
+                        <a th:href="@{/registration}" class="btn btn-custom btn-lg btn-block">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">View</h5>
+                        <p class="card-text">Click below to view.</p>
+                        <a th:href="@{/information}" class="btn btn-custom btn-lg btn-block">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew
+    .min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-
+    esac"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-Keoqd6Wj2ylz4xjXNlX4fF1cytI0KOOI+NhFyA8Wf4Th/kKwvcWLCGM0JlMzKo0V" crossorigin="anonymous"></script>

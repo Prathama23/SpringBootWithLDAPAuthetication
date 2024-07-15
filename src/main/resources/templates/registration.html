@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learner Registration</title>
+    
+    <!-- Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- Thymeleaf link to your custom CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+    
+    <style>
+        /* Custom styles specific to this page */
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        .container {
+            max-width: 600px; /* Limit form width */
+            margin-top: 50px; /* Space from top */
+        }
+        h2 {
+            color: #495057; /* Dark gray heading color */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        label {
+            color: #495057; /* Dark gray label text color */
+        }
+        input[type="text"] {
+            background-color: #edf2f4; /* Pastel blue input background */
+            border: 1px solid #b2bec3; /* Light gray border */
+            color: #495057; /* Dark gray text color */
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #badc58; /* Pastel green submit button */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #6ab04c; /* Darker green on hover */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Create Todo</h2>
+        <form th:action="@{/view}" th:object="${todo}" method="post">
+            <div class="form-group">
+                <label for="name">Description:</label>
+                <input type="text" id="description" name="description" class="form-control" placeholder="Enter the description..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Status:</label>
+                <input type="text" id="completed" name="completed" class="form-control" placeholder="Enter the status..." required>
+            </div>
+
+            <input type="create" value="Create" class="btn btn-block btn-custom">
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (not necessary for this form) -->
+</body>
+</html>
